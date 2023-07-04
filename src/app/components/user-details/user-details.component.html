@@ -1,0 +1,26 @@
+<div class="center">
+    <br>
+    <section class="wrapper-main">
+        <table mat-table class="mat-elevation-z8">
+            <ng-container matColumnDef="Id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let users">{{users.id}}</td>
+            </ng-container> 
+
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef> NAME </th>
+                <td mat-cell *matCellDef="let users">{{users.name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Email">
+                <th mat-header-cell *matHeaderCellDef> EMAIL </th>
+                <td mat-cell *matCellDef="let users">{{users.email}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Phone">
+                <th mat-header-cell *matHeaderCellDef> PHONE </th>
+                <td mat-cell *matCellDef="let users">{{users.phone}}</td>
+            </ng-container>
+        </table>
+    </section>
+</div>

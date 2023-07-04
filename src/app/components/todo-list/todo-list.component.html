@@ -1,0 +1,18 @@
+<div class="todo">
+    <h3>To-Do List</h3>
+    <div class="row">
+        <input type="text" placeholder="Todo Item" #item>
+        <br>
+        <button (click)="addTask(item.value)" >Add</button>
+    </div>
+    <div class="list">
+        <h3>Your List: </h3>
+        <hr>
+        <div class="row">
+            <table>
+                <tr *ngFor="let item of list; let indexOfTodo = index;"><h3>{{item.name}}</h3> <button (onclick)="remove(indexOfTodo)">Remove</button>                 
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
