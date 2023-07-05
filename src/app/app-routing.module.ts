@@ -11,13 +11,15 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 const routes: Routes = [
-  {path: '**', component: HomepageComponent},
+ 
+  {path: 'home', component: HomepageComponent},
   {path: 'task1', component: CounterComponent},
   {path: 'task2', component: TodoListComponent},
   {path: 'task3', component: FormValidationsComponent},
   {path: 'task4', component: ProductsComponent},
   {path: 'task5', component: ImageUploadComponent},
-  {path: 'task6', component: UserDetailsComponent}  
+  {path: 'task6', component: UserDetailsComponent},
+  {path: '**', component: HomepageComponent}  
 ];
 
 @NgModule({

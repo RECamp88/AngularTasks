@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { CounterComponent } from './components/counter/counter.component';
@@ -11,12 +12,15 @@ import { FormValidationsComponent } from './components/form-validations/form-val
 import { ProductsComponent } from './components/products/products.component';
 import { ImageUploadComponent} from './components/image-upload/image-upload.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // Material Imports
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
-import { HomepageComponent } from './components/homepage/homepage.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
+
+
 
 
 @NgModule({
@@ -29,13 +33,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ImageUploadComponent,
     UserDetailsComponent,
     HomepageComponent,
-    NavbarComponent
+    NavbarComponent   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
