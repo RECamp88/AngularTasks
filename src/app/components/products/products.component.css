@@ -1,5 +1,5 @@
 .products{   
-    background: radial-gradient(#fff,#2A2CB2);
+  background: linear-gradient(to bottom,#fff,#2A2CB2);
     width: 600px;
     height: 600px;
     position: relative;

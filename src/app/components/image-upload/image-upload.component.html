@@ -1,8 +1,9 @@
 <div class="circle">
     
     <div class="dot" >
-        <input type="file"  />
-        <img src="" alt="">
-        <label for="fileDropRef">Browse for file</label>
+       <img class="dot-img" [src]="url">
+        <a>
+            <input type="file" (input)="onFileSelected($event)">Browse and Upload an Image
+        </a>     
     </div>
 </div>

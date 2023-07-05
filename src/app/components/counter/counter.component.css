@@ -1,5 +1,5 @@
 .counter{
-    background: radial-gradient(#fff,#2A2CB2);
+    background: linear-gradient(to bottom,#fff,#2A2CB2);
     width: 300px;
     height: 300px;
     position: relative;

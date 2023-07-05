@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
 })
 export class ImageUploadComponent {
 
+    url: any;
+    selectedFile: File | undefined;
+
+    onFileSelected(event : any) {
+      this.selectedFile = <File> event.target.files[0];
+
+      const reader = new FileReader();
+      reader.readAsDataURL(this.selectedFile);
+
+      reader.onload = (_event)=> {
+        this.url = reader.result;
+      }
+    }
   
   }
 

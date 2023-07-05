@@ -1,3 +1,16 @@
-h1{
+.home{
+    background: linear-gradient(to bottom,#fff,#2A2CB2); 
+    width: 600px;
+    height: 400px;
+    position: relative;
     text-align: center;
+    padding: 50px 0;
+    margin: 20px auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);  
+}
+h1{
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 36px;
 }
