@@ -1,18 +1,15 @@
 <div class="todo">
-    <h3>To-Do List</h3>
-    <div class="row">
-        <input type="text" placeholder="Todo Item" #item>
-        <br>
-        <button (click)="addTask(item.value)" >Add</button>
-    </div>
-    <div class="list">
-        <h3>Your List: </h3>
-        <hr>
-        <div class="row">
-            <table>
-                <tr *ngFor="let item of list; let indexOfTodo = index;"><h3>{{item.name}}</h3> <button (onclick)="remove(indexOfTodo)">Remove</button>                 
-                </tr>
-            </table>
-        </div>
-    </div>
+  <h2>Todo List</h2>
+  <input #todo placeholder="add work item" (keyup.enter)="addTodo(todo.value); todo.value = ''">
+  <button (click)="addTodo(todo.value)">Add</button>
+  <hr>
+  <h3>Your ToDo List:</h3>
+  <div *ngFor="let todo of todos; let i = index">
+      <ul>
+          <li>
+              {{ todo }}
+              <button (click)="removeTodo(i)">Remove</button>
+          </li>
+      </ul>
+  </div>
 </div>

@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
- 
- list:any[]=[];
- 
- addTask(item:string){
-  this.list.push({id:this.list.length, name:item});
-  console.log(this.list);
- }
+  
+  todos : string[] = []
 
-remove(index:number){
-  this.list = this.list.splice(index, 1);
-}
+  addTodo(todo : string) : void {
+    this.todos.push(todo)
+  }
+
+  removeTodo(index : number) : void {
+    this.todos.splice(index, 1)
+  }
+  
 }

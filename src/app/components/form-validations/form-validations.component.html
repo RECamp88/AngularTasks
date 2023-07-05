@@ -1,16 +1,25 @@
-
-    
-    <form class="userForm">
-        <h2>Form Validation</h2>
-        <p>Name: <input type="text" name="name" ng-model="name" > </p>
-        <br>
-        <p>Email: <input type="email" name="email" ng-model="email"></p>
-        <br>
-        <p>Phone: <input type="tel"  name="phone" ng-model="phone" ></p>
-        <br>
-        <p>Password: <input type="password"  name="password" ng-model="password"></p>
-        <br>
-        <button [disabled]="name.length==0||!email.includes('@')||phone.length< 10 || phone.length > 10 || password.length < 8">Submit</button>
-    </form>
+<div class="user">
+  <div>
+      <h2><u>Form Validation</u></h2>
+      <br>
+      <p>Name: <input type="text" name="name" [(ngModel)]="name" > </p>
+      <br>
+      <p>Email: <input type="email" name="email" [(ngModel)]="email"></p>
+      <br>
+      <p>Phone: <input type="text"  name="phone" [(ngModel)]="phone" ></p>
+      <br>
+      <p>Password: <input type="password"  name="password" [(ngModel)]="password"></p>
+      <button [disabled]="name.length==0||!email.includes('@')|| phone.length < 10 || phone.length > 10 || password.length < 8" (click)="onSubmit()">Submit</button>
+      <hr>
+  </div>     
+  <div *ngIf="isSubmitted">
+    <h3>Submitted Details:</h3>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Phone: {{ user.phone }}</p>
+    <p>Password: {{ user.password }}</p>
+  </div>
+</div>    
+   
 
    

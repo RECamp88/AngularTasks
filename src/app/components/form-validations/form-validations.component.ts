@@ -8,9 +8,26 @@ import { Component } from '@angular/core';
 })
 export class FormValidationsComponent {
  
-  name: string = "";
-  email: string = "";
-  phone: string = "";
-  password: string = "";
- 
+  name: string = ""
+  email: string = ""
+  phone: string = ""
+  password: string = ""
+
+  isSubmitted: boolean = false;
+
+  user: any = {
+    name : "",
+    email : "",
+    phone : "",
+    password : ""
+  }
+
+  onSubmit() : void {
+    this.user.name = this.name
+    this.user.email = this.email
+    this.user.phone = this.phone
+    this.user.password = this.password
+    console.log(this.user);
+    this.isSubmitted = true;
+  }
 }
